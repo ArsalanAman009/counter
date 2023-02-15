@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter-app</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <button id="save-btn" onclick="save()" class="hd-btn">   
+        save
+        </button> 
+        <p id="save-el"> Previous Entries:</p>
+        <button id="clear-btn" onclick="clear3()" class="hd-btn">   
+         S-clear
+         </button> 
+      </header>
+      <div class=" ">
+        <div class="img-area">
+          <h3 id="count-el">0</h3>
+        </div>
+        <div class="song-details">
+          <h1 class="name"> <b>COUNTER</b> </h1>
+          <h3 class="artist">App</h3>
+        </div>
+
+        <div class="controls">
+          
+          <button class="btnc" id="prev" onclick="increment()"  onkeyup="increment()">
+            <img src="./assects/icons8-up-arrow-60.png" alt="">
+          </button>
+          <button class="btnc" id="prev" onclick=" clear5()" onkeydown="clear5()">
+            <img src="./assects/icons8-up-arrow-60 (1).png" alt="">
+            
+          </button>
+          <button onclick="clear2()" class="btnc" id="prev">
+            Clear 
+          </button>
+        </div>
+      </div>
+    </div>
+ 
+<script>
+ 
+</script>
+    <script src="./app.js">
+
+    </script>
+  </body>
+</html>

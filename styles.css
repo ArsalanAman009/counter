@@ -1,0 +1,215 @@
+:root {
+  --bg01: linear-gradient(180deg, #22262a 0%, #181a1d 100%);
+  --bg02: linear-gradient(135deg, #2f3439 0%, #1d1f23 100%);
+  --bg03: linear-gradient(135deg, #2c3136 0%, #1d2023 100%);
+  --bg04: #040404;
+  --border01: #22262a;
+  --border02: #1a1d21;
+
+  --box-shadow01: 6px 6px 10px #151618, -6px -6px 10px #2c3136,
+    inset 2px 2px 10px #33353b, inset -3px -3px 6px #151618;
+  --box-shadow02: -6px -6px 10px #151618, 6px 6px 10px #151618,
+    inset 2px 2px 6px #33353b, inset -3px -3px 6px #151618;
+  --box-shadow3: 6px 6px 10px #151618, -6px -6px 10px;
+  --box-shadow04: inset 2px 2px 3px -2px rgba(167, 169, 171, 0.322),
+    inset -0px -1px 1px 0px #4a4c4e;
+  --box-shadow05: 8px 8px 12px #151618, -2px -2px 10px #2c3136,
+    inset 2px 2px 3px #33353b, inset -2px -2px 3px #151618;
+  --box-shadow06: 10px 10px 12px #151618, -10px -10px 12px #222529,
+    inset 4px 4px 8px #33353b, inset -4px -4px 8px #151618;
+  --box-shadow07: 10px 10px 12px #151618, -10px -10px 12px #222529,
+    inset -4px -4px 8px #33353b, inset 4px 4px 8px #151618;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: "lato" sans-serif;
+}
+body {
+  font-family: "lato" sans-serif;
+  height: 100vh;
+  background: var(--bg01);
+  /* background:black; */
+}
+.wrapper {
+  background: var(--bg01);
+  max-width: 400px;
+  height: 90vh;
+  border: 1px solid var(--border02);
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px #151618, 6px 6px 10px #151618,
+    inset 6px 6px 10px #151618, inset 6px 6px 10px #151618;
+  text-align: center;
+  padding: 2em;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+header,
+.song-timer,
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.hd-btn {
+  background: var(--bg02);
+  border: 2px var(--border01);
+  box-shadow: var(--box-shadow01);
+  width: 53px;
+  height: 53px;
+  line-height: 52px;
+  color:black;
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+.hd-btn:active {
+  box-shadow: var(--box-shadow02);
+}
+header h1 {
+  margin-left: 3.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #86898c;
+}
+.player {
+  margin-top: 2rem;
+}
+
+.img-area h3{
+  width: 13rem;
+  font-size: 3rem;
+  padding: 4rem 4rem 4rem 4rem;
+  height: 13rem;
+  margin-left: 3.6rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  object-fit: cover;
+  border: 10px solid var(--border02);
+  border-radius: 50%;
+  /* color: #a7a9ab; */
+  background-color:var(--bg03);
+  box-shadow: var(--box-shadow3);
+}
+.name {
+  color: #040404;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.artist {
+  color: #040404;
+  font-size: 14px;
+  padding: 10px 0 20px 0;
+}
+.audioc {
+  margin: 30px 0 30px 0;
+}
+.song-timer {
+  margin-bottom: 20px;
+}
+.song-timer span {
+  font-size: 10px;
+  color: #7c7d80;
+  font-weight: 600;
+}
+.progress-area {
+  height: 7px;
+  width: 100%;
+  margin-top: 15px;
+  background-repeat: 50px;
+  background: var(--bg04);
+  box-shadow: var(--box-shadow04);
+  cursor: pointer;
+}
+.progress-bar {
+  height: inherit;
+  width: 0%;
+  position: relative;
+  border-radius: inherit;
+  background: linear-gradient(#bf2311 0%, #e1530a 80%);
+  box-shadow: var(--box-shadow04);
+}
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  background: var(--bg02);
+  box-shadow: var(--box-shadow05);
+  border-radius: 50%;
+  top: -16px;
+  right: -40px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translate(-50%);
+  transition: all 0;
+}
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  background: #e1530a;
+  /* box-shadow: var(--box-shadow05); */
+  border-radius: 50%;
+  right: -20px;
+  top: -8px;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translate(-50%);
+  transition: all 0;
+}
+.controls {
+  /* margin: 55px 8px 5px 8px; */
+  margin: 29px 30px 8px 30px;
+}
+.btnc {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--border02);
+  transition: all 0.2 ease;
+  background: var(--bg03);
+  box-shadow: var(--box-shadow06);
+}
+.btnc:active{
+    box-shadow: var(--box-shadow07);
+}
+.btnc img{
+  width: 25px;
+  height: 25px;
+ font-size: 1rem; 
+  user-select: none;
+ cursor: pointer;
+}
+.controls .play-pause{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.rotate{
+    animation: rotation 8s infinite linear;
+    transform-origin: center ;
+
+}
+@keyframes rotation{
+    from{
+        transform:rotate(0deg) ;
+    }
+    to{
+        transform:rotate(359deg) ;
+
+    }
+}
